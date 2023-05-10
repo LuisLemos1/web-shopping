@@ -1,0 +1,98 @@
+body {
+	padding-top: 75px;
+    color: black;
+    background-color: #DCEFEF;
+	margin: 0;
+}
+
+/* barra de navegacao (links) */
+.header {
+	background-color: #55B4B0;
+	overflow: hidden;
+	position: fixed; /* atribuir um menu fixo */
+	top: 0; /* Posicionar no topo */
+	width: 100%;
+	z-index: 99;  /*Sobreporse*/
+}
+
+.header a { 
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	font-size: 22px;
+}
+
+.header a:hover {
+	background-color: #EFC050;
+	color: black;
+	box-shadow: 0 0 16px 0 yellow;
+}
+
+.header a:active {
+	background-color: #d9ff66;
+} 
+
+#header-right {
+	float: right;
+	padding-top: 14px;
+}
+
+#header-left{
+	float: left;
+	height:50px;
+	width: 100px;
+}
+
+.cart img{
+	height:20px; 
+	width: 20px;
+}
+
+.title {
+	width: 73%;
+	margin-bottom: 5px;
+	border-bottom: 1px solid grey;
+	margin-left:10px;
+}
+  
+.right-section {
+	width: 20%;
+	background-color: rgb(189, 219, 217);
+    height: 100%;
+	position: fixed;
+	right: 0px;
+	top: 66px;
+	border-collapse: collapse;
+	text-align: center;
+	margin-left: 2%;
+	padding-right: 5%;
+	padding-left: 5%;
+	border-left: 1px solid grey;
+}
+
+.left-section {
+    width: 50%;
+    height: 100%;
+    float: left;
+	border-collapse: collapse;
+	padding-left: 0px;
+	padding-right: 2%;
+	margin-left: 10%;
+	margin-bottom: 60px;
+	padding-bottom: 0px;
+}
+
+/* Rodape */
+#footer {
+	background-color: #55B4B0;
+	position: fixed;
+	text-align: right;
+	font-size: 10px;
+    overflow: hidden;
+	bottom: 0; /* Posicionar no fim */
+	width: 100%; 
+	margin-top: 30px;
+}
