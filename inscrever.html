@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+    <head>
+		<script src="js/cookies.js"></script>
+	    <link rel="shortcut icon" href="img/icons/icon.png">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <title> All Aboard Shop - Luis Lemos 1801882 - UAB</title>
+    </head>
+    <body>
+        <div class="header">
+			<a href="index.html"><img id="header-left" src="img/allaboard.png " title="Página Principal"></a>				
+			<div id="header-right">
+				<span id="guest" style="display: none;">
+					<a href="login.html"  style="color: black">Login</a>
+					<a href="inscrever.html"  style="color: black">Inscrever</a>
+				</span>						
+				<span id="user" style="display: none;">
+					<a id="greetings" style="cursor: default; color: black">
+						Ola USer&nbsp;
+						<span id="sair" onclick="Logout()" style="cursor: pointer; font-weight: bold; font-size: small; color: darkblue"><u>Sair</u></span>
+					</a>
+					<a class="cart" href="carrinho.html" style="cursor: pointer; color: black">
+						<img src="img/icons/carticon.png">
+						Carrinho 
+						[ <span style="color:darkblue">0</span> ]
+					</a>
+				</span>
+			</div>
+        </div>
+		
+		<div class="content">
+            <h1>Inscrição</h1>            
+            <form style="text-align: left; margin-left: 32%;">
+                <label style="width: 100px;">Nome</label><input type="text" id="name">
+                <label id="nameError" style="color:red;"></label>
+                <br>
+                <label style="width: 100px;">Email</label><input type="text" id="email">
+                <label id="emailError" style="color:red;"></label>
+                <br>
+                <label style="width: 100px;">Password</label><input type="password" id="password">
+                <label id="passwordError" style="color:red;"></label>
+                <br>
+                <label style="width: 100px;">Morada</label><input type="text" id="address">
+                <label id="addressError" style="color:red;"></label>
+                <br>
+                <label style="width: 100px;">Código Postal</label><input type="text" id="postCode">
+                <br>
+                <label style="width: 100px;">Localidade</label><input type="text" id="localidade">
+                <br>
+                <label style="width: 100px;">País</label>
+                <select style="margin-left: 10px;width:150px;display: inline-block;" id="country">
+                    <option id="Espanha">Espanha</option>							
+					<option id="França">França</option>
+					<option id="Portugal" selected>Portugal</option>
+					<option id="United Kingdom">United Kingdom</option>
+					<option id="USA">USA</option>
+                </select>
+                <br><br>
+                <input type="button" value="Guardar Registo" onclick="SaveUserData()" style="margin-left: 120px;">
+                <br>
+                <label id="saveNote" style="color: green;font-size: 20px;"></label>
+            </form>
+		</div>
+		
+		<footer id="footer" style="position: fixed">	
+            <p> &copy; 21182 - Lab. de Sistemas e Serviços Web - Universidade Aberta - 2020</p>
+		</footer>
+
+        <script src="js/inscrever.js"></script>
+        <script src="js/main.js"></script>
+		<script src="js/carrinho.js"></script>
+		<script type="text/javascript">
+			window.onload = onLoadCartNumbers();
+			window.onload = LoadUser();
+        </script>
+        
+    </body>
+</html>

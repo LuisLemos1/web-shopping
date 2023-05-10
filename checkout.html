@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+    <head>
+		<script src="js/cookies.js"></script>
+	    <link rel="shortcut icon" href="img/icons/icon.png">
+        <link rel="stylesheet" type="text/css" href="css/checkout.css">
+		<title> All Aboard Shop- Luis Lemos 1801882 - UAB</title>
+    </head>
+    <body>
+		<div class="header">
+			<a href="index.html"><img id="header-left" src="img/allaboard.png " title="Página Principal"></a>				
+			<div id="header-right">
+				<span id="guest" style="display: none;">
+					<a href="login.html"  style="color: black">Login</a>
+					<a href="inscrever.html"  style="color: black">Inscrever</a>
+				</span>						
+				<span id="user" style="display: none;">
+					<a id="greetings" style="cursor: default; color: black">
+						Ola USer&nbsp;
+						<span id="sair" onclick="Logout()" style="cursor: pointer; font-weight: bold; font-size: small; color: darkblue"><u>Sair</u></span>
+					</a>
+					<a class="cart" href="carrinho.html" style="cursor: pointer; color: black">
+						<img src="img/icons/carticon.png">
+						Carrinho 
+						[ <span style="color:darkblue">0</span> ]
+					</a>
+				</span>
+			</div>
+        </div>
+		<div class="left-section" style="margin-bottom: 5px; border: 1px solid grey; background-color: rgb(137, 211, 207); margin-left: 11%;">
+			<center><h1>Checkout</h1></center>
+		</div>
+		<div class="right-section">
+			<div class="subtotal" style="font-size: medium;"><center><h2>Subtotal</h2></center>
+				€<span></span>
+				<span id="envioEstrangeiro" style="display: none;"></span>
+				<span id="envioExpressoNota" style="display: none;">+ €20 (Correio expresso)</span>				
+				<span id="subtractDiscount" style="display: none;">- €<span id="discountedPrice"></span> (Desconto de <span id="valueDiscount"></span>%)</span>
+			</div>
+			<div><center><h2>Codigo Promocional</h2></center>
+				<input id="discountCode" type="text" size="10">
+				<button onclick="SubmitPromoCode()">Submeter</button>
+				<div style="margin-top: 0px;">
+					<span id="promoCodeNote"></span>
+				</div>
+			</div>
+			<div class="valorFinal" style="font-size: x-large; margin-bottom: 100px;"><center><h2>Total</h2></center>
+				€<span></span>
+			</div>
+		</div>
+
+		<div class="left-section">
+			<div>
+				<center>
+					<h2>Morada</h2>
+					<span id="showAddress"  style="display: block;">
+						<span style="border: 1px solid grey; padding-left: 30px; padding-right: 30px; display: inline-block; width: auto; min-width: 200px; text-align: left;" align="left">
+							<p id="streetAddress"></p>
+							<p id="postCode"></p>
+							<p id="localidade"></p>
+							<p id="pais"></p>
+						</span>
+						<br><br>
+						<button onclick="ChangeAddress()">Alterar</button>
+						<br>
+						<label id="addressSucess" style="color: green;"></label>
+					</span>
+					<span id="changeAddress" style="display: none;">
+						<form id='registo' align="left">
+							<label align="right" style="margin-left: 25%;width:100px;display: inline-block;">Morada:</label><input style="margin-left: 10px;width:250px;display: inline-block;" type="text" id="newStreetAddress">
+							<br><center><label id="errorStreetAddress" style="color:red; padding-left: 100px;"></label></center>
+							<br>
+							<label align="right" style="margin-left: 25%;width:100px;display: inline-block;">Cód. Postal:</label><input style="margin-left: 10px;width:75px;display: inline-block;" type="text" id="newPostCode">
+							<br><center><label id="errorPostCode" style="color:red; padding-left: 100px;"></label></center>
+							<br>
+							<label align="right" style="margin-left: 25%;width:100px;display: inline-block;">Localidade:</label><input style="margin-left: 10px;width:150px;display: inline-block;" type="text" id="newLocalidade">
+							<br><center><label id="errorLocalidade" style="color:red; padding-left: 100px;"></label></center>
+							<br>
+							<label align="right" style="margin-left: 25%;width:100px;display: inline-block;">País:</label>
+							<select style="margin-left: 10px;width:150px;display: inline-block;" id="newPais">							
+								<option id="Espanha">Espanha</option>							
+								<option id="França">França</option>
+								<option id="Portugal" selected>Portugal</option>
+								<option id="United Kingdom">United Kingdom</option>
+								<option id="USA">USA</option>
+							</select>
+							<br><br><br>
+							<center><input type="button" onclick="SaveAddress()" value="Guardar"> </center>
+							<br><br>
+						</form>
+					</span>
+				</center>
+			</div>
+			<div>
+				<center>
+					<h2>Tipo de Entrega</h2>
+					<span>
+						<form">
+							<input type="radio" id="entregaNormal" name="entrega" value="normal" onclick="CalculateAllPrices()"> Envio normal
+							<input type="radio" id="entregaExpresso" name="entrega" value="expresso" onclick="CalculateAllPrices()"> Envio expresso (+ €20)
+						</form>
+					</span>
+				</center>
+			</div>
+		</div>
+		<div style="padding-bottom: 20px;">&nbsp;</div>
+		<footer id="footer">	
+            <p> &copy; 21182 - Lab. de Sistemas e Serviços Web - Universidade Aberta - 2020</p>
+		</footer>
+
+		<script src="js/main.js"></script>
+		<script src="js/carrinho.js"></script>
+		<script src="js/checkout.js"></script>
+		<script type="text/javascript">
+			window.onload = onLoadCartNumbers();
+			window.onload = LoadUser();
+			window.onload = DisplayCheckout();
+		</script>
+
+    </body>
+</html>

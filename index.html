@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+    <head>
+	    <link rel="shortcut icon" href="img/icons/icon.png">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+		<title> All Aboard Shop - Luis Lemos 1801882 - UAB</title>
+		<script src ="js/cookies.js"></script>
+    </head>
+    <body>
+        <div class="header">
+			<a href="index.html"><img id="header-left" src="img/allaboard.png " title="Página Principal"></a>				
+			<div id="header-right">
+				<span id="guest" style="display: none;">
+					<a href="login.html"  style="color: black">Login</a>
+					<a href="inscrever.html"  style="color: black">Inscrever</a>
+				</span>						
+				<span id="user" style="display: none;">
+					<a id="greetings" style="cursor: default; color: black">
+						Ola USer
+						<span id="sair" onclick="Logout()" style="cursor: pointer; font-weight: bold; font-size: small; color: darkblue"><u>Sair</u></span>
+					</a>
+					<a class="cart" href="carrinho.html" style="cursor: pointer; color: black">
+						<img src="img/icons/carticon.png">
+						Carrinho 
+						[ <span style="color:darkblue">0</span> ]
+					</a>
+				</span>
+			</div>
+        </div>
+		<div style="padding-top: 70px; font-size: 25px; text-align: center;">
+			<p>Necessita algo para se divertir?</p>
+			<p>Com o AllAboard nao lhe falta nada! Tudo para desportos aquáticos!</p>
+		</div>
+		<div>
+			<table width="100%">
+				<tr>
+					<td>
+						<div class="slider-box">
+							<div class="img-box">
+								<img src="img/standup.jpg">
+							</div>
+							<p class="detail">Conjunto Paddle Board<a href="#" class="price">€300.00</a></p>
+							<div class="add-cart 1">
+								<a href="#" onclick="return false">Adicionar ao Carrinho</a>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="slider-box">
+							<div class="img-box">
+								<img src="img/surf.jpg">
+							</div>
+							<p class="detail">Conjunto Surf<a href="#" class="price">€249.99</a></p>
+							<div class="add-cart 2">
+								<a href="#" onclick="return false">Adicionar ao Carrinho</a>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="slider-box">
+							<div class="img-box">
+								<img src="img/windsurf.jpg">
+							</div>
+							<p class="detail">Conjunto Windsurf<a href="#" class="price">€1,480.99</a></p>
+							<div class="add-cart 3">
+								<a href="#" onclick="return false">Adicionar ao Carrinho</a>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="slider-box">
+							<div class="img-box">
+								<img src="img/wakeboard.jpg">
+							</div>
+							<p class="detail">Wakeboard<a href="#" class="price">€310.47</a></p>
+							<div class="add-cart 4">
+								<a href="#" onclick="return false">Adicionar ao Carrinho</a>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="slider-box">
+							<div class="img-box">
+								<img src="img/barco.jpg">
+							</div>
+							<p class="detail">Barco Insuflavel<a href="#" class="price">€70.78</a></p>
+							<div class="add-cart 5">
+								<a href="#" onclick="return false">Adicionar ao Carrinho</a>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="slider-box">
+							<div class="img-box">
+								<img src="img/kayak.jpg">
+							</div>
+							<p class="detail">Kayak<a href="#" class="price">€404.99</a></p>
+							<div class="add-cart 6">
+								<a href="#" onclick="return false">Adicionar ao Carrinho</a>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="slider-box">
+							<div class="img-box">
+								<img src="img/kayakglass.jpg">
+							</div>
+							<p class="detail">Kayak Espelhado<a href="#" class="price">€539.18</a></p>
+							<div class="add-cart 7">
+								<a href="#" onclick="return false">Adicionar ao Carrinho</a>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="slider-box">
+							<div class="img-box">
+								<img src="img/speedboat.jpg">
+							</div>
+							<p class="detail">Speed Boat<a href="#" class="price">€15,824.99</a></p>
+							<div class="add-cart 8">
+								<a href="#" onclick="return false">Adicionar ao Carrinho</a>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="slider-box">
+							<div class="img-box">
+								<img src="img/parasailing.jpg">
+							</div>
+							<p class="detail">Conjunto de Parasailing<a href="#" class="price">€1,000.00</a></p>
+							<div class="add-cart 9">
+								<a href="#" onclick="return false">Adicionar ao Carrinho</a>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="slider-box">
+							<div class="img-box">
+								<img src="img/underjet.jpg">
+							</div>
+	
+							<p class="detail">JetSki Subaquatico<a href="#" class="price">€799.29</a></p>
+							<div class="add-cart 10">
+								<a href="#" onclick="return false">Adicionar ao Carrinho</a>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="slider-box">
+							<div class="img-box">
+								<img src="img/snorkel.jpg">
+							</div>
+	
+							<p class="detail">Conjunto Snorkelling<a href="#" class="price">€35.00</a></p>
+							<div class="add-cart 11">
+								<a href="#" onclick="return false">Adicionar ao Carrinho</a>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="slider-box">
+							<div class="img-box">
+								<img src="img/scuba.jpg">
+							</div>
+	
+							<p class="detail">Conjunto Mergulho<a href="#" class="price">€1,049.23</a></p>
+							<div class="add-cart 12">
+								<a href="#" onclick="return false">Adicionar ao Carrinho</a>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+        <div style="padding-bottom: 20px;">&nbsp;</div>
+		<footer id="footer">	
+            <p> &copy; 21182 - Lab. de Sistemas e Serviços Web - Universidade Aberta - 2020</p>
+		</footer>
+
+		<script src="js/main.js"></script>
+		<script src="js/carrinho.js"></script>
+		<script type="text/javascript">
+			window.onload = onLoadCartNumbers();
+			window.onload = LoadUser();
+		</script>
+
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+    <head>
+		<script src="js/cookies.js"></script>
+	    <link rel="shortcut icon" href="img/icons/icon.png">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+		<title> All Aboard Shop - Luis Lemos 1801882 - UAB</title>
+    </head>
+    <body>
+        <div class="header">
+			<a href="index.html"><img id="header-left" src="img/allaboard.png " title="Página Principal"></a>				
+			<div id="header-right">
+				<span id="guest" style="display: none;">
+					<a href="login.html"  style="color: black">Login</a>
+					<a href="inscrever.html"  style="color: black">Inscrever</a>
+				</span>						
+				<span id="user" style="display: none;">
+					<a id="greetings" style="cursor: default; color: black">
+						Ola USer
+						<span id="sair" onclick="Logout()" style="cursor: pointer; font-weight: bold; font-size: small; color: darkblue"><u>Sair</u></span>
+					</a>
+					<a class="cart" href="carrinho.html" style="cursor: pointer; color: black">
+						<img src="img/icons/carticon.png">
+						Carrinho 
+						[ <span style="color:darkblue">0</span> ]
+					</a>
+				</span>
+			</div>
+        </div>
+		<div class="content">
+			<h1>Login</h1>
+			<form id="login">	
+				<label style="width: 100px;">Nome</label><input type="text" id="name">
+				<br>
+				<label style="width: 100px;">Palavra Chave</label><input type="password" id="password">
+				<br><br>
+				<button type="button" id="login" value="login" onclick="Login()">Submeter</button>
+				<br>
+				<label id="errorLogin" style="color:red;"></label>
+			</form>
+		</div>
+		
+        <div style="padding-bottom: 20px;">&nbsp;</div>
+		<footer id="footer" style="position: fixed">	
+            <p> &copy; 21182 - Lab. de Sistemas e Serviços Web - Universidade Aberta - 2020</p>
+		</footer>
+
+		<script type="text/javascript" src="js/login.js"></script>
+		<script src="js/main.js"></script>
+		<script type="text/javascript">
+			window.onload = LoadUser();
+		</script>
+    </body>
+</html>
